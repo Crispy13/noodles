@@ -63,5 +63,7 @@ async = [
   "noodles-vcf?/async",
 ]
 
+libdeflate = ["noodles-bgzf?/libdeflate",]
+
 [package.metadata.docs.rs]
 all-features = true
