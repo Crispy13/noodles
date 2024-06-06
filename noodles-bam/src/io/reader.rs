@@ -19,7 +19,7 @@ use noodles_core::Region;
 use noodles_csi::BinningIndex;
 use noodles_sam::{self as sam, alignment::RecordBuf, header::ReferenceSequences};
 
-pub use self::{builder::Builder, query::Query, record_bufs::RecordBufs, records::Records};
+pub use self::{builder::Builder, query::{Query, QueriedReader}, record_bufs::RecordBufs, records::Records};
 use self::{record::read_record, record_buf::read_record_buf};
 use crate::Record;
 

@@ -67,3 +67,7 @@ pub use noodles_tabix as tabix;
 #[cfg(feature = "vcf")]
 #[doc(inline)]
 pub use noodles_vcf as vcf;
+
+#[cfg(feature = "ext")]
+#[doc(inline)]
+pub use noodles_ext as ext;

@@ -7,7 +7,7 @@ members = [
   "noodles-bgzf",
   "noodles-core",
   "noodles-cram",
-  "noodles-csi",
+  "noodles-csi", "noodles-ext",
   "noodles-fasta",
   "noodles-fastq",
   "noodles-gff",

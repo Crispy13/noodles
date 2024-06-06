@@ -33,7 +33,7 @@ bitflags::bitflags! {
 }
 
 impl Flags {
-    /// Returns whether the `SEGMENTED` flag is set.
+    /// Returns whether the `SEGMENTED` (0x1) flag is set.
     ///
     /// # Examples
     ///
@@ -61,7 +61,7 @@ impl Flags {
         self.contains(Self::PROPERLY_ALIGNED)
     }
 
-    /// Returns whether the `PROPERLY_SEGMENTED` flag is set.
+    /// Returns whether the `PROPERLY_SEGMENTED` (0x2) flag is set.
     ///
     /// # Examples
     ///
@@ -74,7 +74,7 @@ impl Flags {
         self.contains(Self::PROPERLY_SEGMENTED)
     }
 
-    /// Returns whether the `UNMAPPED` flag is set.
+    /// Returns whether the `UNMAPPED` (0x4) flag is set.
     ///
     /// # Examples
     ///
@@ -87,7 +87,7 @@ impl Flags {
         self.contains(Self::UNMAPPED)
     }
 
-    /// Returns whether the `MATE_UNMAPPED` flag is set.
+    /// Returns whether the `MATE_UNMAPPED` (0x8) flag is set.
     ///
     /// # Examples
     ///
@@ -100,7 +100,7 @@ impl Flags {
         self.contains(Self::MATE_UNMAPPED)
     }
 
-    /// Returns whether the `REVERSE_COMPLEMENTED` flag is set.
+    /// Returns whether the `REVERSE_COMPLEMENTED` (0x10) flag is set.
     ///
     /// # Examples
     ///
@@ -113,7 +113,7 @@ impl Flags {
         self.contains(Self::REVERSE_COMPLEMENTED)
     }
 
-    /// Returns whether the `MATE_REVERSE_COMPLEMENTED` flag is set.
+    /// Returns whether the `MATE_REVERSE_COMPLEMENTED` (0x20) flag is set.
     ///
     /// # Examples
     ///
@@ -126,7 +126,7 @@ impl Flags {
         self.contains(Self::MATE_REVERSE_COMPLEMENTED)
     }
 
-    /// Returns whether the `FIRST_SEGMENT` flag is set.
+    /// Returns whether the `FIRST_SEGMENT` (0x40) flag is set.
     ///
     /// # Examples
     ///
@@ -139,7 +139,7 @@ impl Flags {
         self.contains(Self::FIRST_SEGMENT)
     }
 
-    /// Returns whether the `LAST_SEGMENT` flag is set.
+    /// Returns whether the `LAST_SEGMENT` (0x80) flag is set.
     ///
     /// # Examples
     ///
@@ -152,7 +152,7 @@ impl Flags {
         self.contains(Self::LAST_SEGMENT)
     }
 
-    /// Returns whether the `SECONDARY` flag is set.
+    /// Returns whether the `SECONDARY` (0x100) flag is set.
     ///
     /// # Examples
     ///
@@ -165,7 +165,7 @@ impl Flags {
         self.contains(Self::SECONDARY)
     }
 
-    /// Returns whether the `QC_FAIL` flag is set.
+    /// Returns whether the `QC_FAIL` (0x200) flag is set.
     ///
     /// # Examples
     ///
@@ -178,7 +178,7 @@ impl Flags {
         self.contains(Self::QC_FAIL)
     }
 
-    /// Returns whether the `DUPLICATE` flag is set.
+    /// Returns whether the `DUPLICATE` (0x400) flag is set.
     ///
     /// # Examples
     ///
@@ -191,8 +191,8 @@ impl Flags {
         self.contains(Self::DUPLICATE)
     }
 
-    /// Returns whether the `SUPPLEMENTARY` flag is set.
-    ///
+    /// Returns whether the `SUPPLEMENTARY` (0x800) flag is set.
+    /// 
     /// # Examples
     ///
     /// ```

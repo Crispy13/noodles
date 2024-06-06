@@ -15,9 +15,10 @@ impl<'a> Name<'a> {
     /// Returns the name as a byte slice.
     ///
     /// The returned slice will _not_ have the trailing `NUL` terminator.
-    pub fn as_bytes(&self) -> &[u8] {
+    pub fn as_bytes(&self) -> &'a [u8] {
         const NUL: u8 = 0x00;
-        self.as_ref().strip_suffix(&[NUL]).unwrap_or(self.as_ref())
+        // self.as_ref().strip_suffix(&[NUL]).unwrap_or(self.as_ref())
+        self.0.strip_suffix(&[NUL]).unwrap_or(self.0)
     }
 }
 

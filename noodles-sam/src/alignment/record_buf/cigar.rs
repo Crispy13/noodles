@@ -80,7 +80,10 @@ impl crate::alignment::record::Cigar for Cigar {
     fn len(&self) -> usize {
         self.0.len()
     }
-
+    
+    /// Note implementation for this type is infailable.
+    /// 
+    /// The iter produces `Result` to match other trait implementations.
     fn iter(&self) -> Box<dyn Iterator<Item = io::Result<Op>> + '_> {
         Box::new(self.0.iter().copied().map(Ok))
     }

@@ -28,6 +28,7 @@ noodles-refget = { path = "../noodles-refget", version = "0.5.0", optional = tru
 noodles-sam = { path = "../noodles-sam", version = "0.60.0", optional = true }
 noodles-tabix = { path = "../noodles-tabix", version = "0.41.0", optional = true }
 noodles-vcf = { path = "../noodles-vcf", version = "0.57.0", optional = true }
+noodles-ext = { path = "../noodles-ext", optional = true }
 
 [features]
 default = []
@@ -48,6 +49,7 @@ refget = ["dep:noodles-refget"]
 sam = ["dep:noodles-sam"]
 tabix = ["dep:noodles-tabix"]
 vcf = ["dep:noodles-vcf"]
+ext = ["dep:noodles-ext"]
 
 async = [
   "noodles-bam?/async",
@@ -63,7 +65,7 @@ async = [
   "noodles-vcf?/async",
 ]
 
-libdeflate = ["noodles-bgzf?/libdeflate",]
+libdeflate = ["noodles-bgzf?/libdeflate"]
 
 [package.metadata.docs.rs]
 all-features = true
