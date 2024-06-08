@@ -1,0 +1,11 @@
+[package]
+name = "noodles-ext"
+version = "0.1.0"
+license.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+noodles-core = { path="../noodles-core" }
+noodles-bam = { path="../noodles-bam" }
+noodles-sam = { path="../noodles-sam" }
